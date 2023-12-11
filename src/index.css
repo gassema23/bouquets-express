@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ Change scrollbar
+*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+ 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/**
+Add active state style on primary nav
+*/
+#navigation .active{
+    @apply after:scale-x-100
+}
+
+#mobileNav .active{
+    @apply bg-gray-100
+}
+
+
+.react-tabs__tab-list {
+    @apply container mx-auto flex gap-4
+}
+.react-tabs__tab-list li{
+    @apply px-5 cursor-pointer hover:text-primary outline-0 transition duration-300
+}
+
+.react-tabs__tab-list .react-tabs__tab--selected{
+    @apply text-primary
+}
+
+
+/**
+Add styling to text
+*/
+@layer base {
+    h1 {
+        @apply text-5xl font-bold;
+    }
+    h2 {
+        @apply text-4xl font-bold;
+    }
+    h3 {
+        @apply text-2xl font-bold;
+    }
+    h4 {
+        @apply text-xl font-bold;
+    }
+    h5 {
+        @apply text-lg font-bold;
+    }
+    h6 {
+        @apply text-lg;
+    } 
+  }
