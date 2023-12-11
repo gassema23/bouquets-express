@@ -75,6 +75,7 @@ function Produit() {
                 </div>
               </div>
             </div>
+
             <Tabs>
               <div className="border-t border-b py-4 my-4 border-dark">
                 <TabList>
