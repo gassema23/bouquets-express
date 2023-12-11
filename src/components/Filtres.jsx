@@ -13,7 +13,7 @@ function Filtres() {
           {categories.map((category) => (
             <li>
               <a
-                href="/"
+                href="#"
                 className="hover:text-primary transition duration-300"
               >
                 {category}
@@ -26,23 +26,23 @@ function Filtres() {
         <h5>Produits</h5>
         <ul>
           <li>
-            <a href="/" className="hover:text-primary transition duration-300">
+            <a href="#" className="hover:text-primary transition duration-300">
               Bonne fête
             </a>
           </li>
           <li>
-            <a href="/" className="hover:text-primary transition duration-300">
+            <a href="#" className="hover:text-primary transition duration-300">
               Rétablissement
             </a>
           </li>
 
           <li>
-            <a href="/" className="hover:text-primary transition duration-300">
+            <a href="#" className="hover:text-primary transition duration-300">
               Condoléances
             </a>
           </li>
           <li>
-            <a href="/" className="hover:text-primary transition duration-300">
+            <a href="#" className="hover:text-primary transition duration-300">
               Toute occasions
             </a>
           </li>
@@ -52,22 +52,22 @@ function Filtres() {
         <h5>Prix</h5>
         <ul>
           <li>
-            <a href="/" className="hover:text-primary transition duration-300">
+            <a href="#" className="hover:text-primary transition duration-300">
               $5 - $20
             </a>
           </li>
           <li>
-            <a href="/" className="hover:text-primary transition duration-300">
+            <a href="#" className="hover:text-primary transition duration-300">
               $20 - $50
             </a>
           </li>
           <li>
-            <a href="/" className="hover:text-primary transition duration-300">
+            <a href="#" className="hover:text-primary transition duration-300">
               $50 - $100
             </a>
           </li>
           <li>
-            <a href="/" className="hover:text-primary transition duration-300">
+            <a href="#" className="hover:text-primary transition duration-300">
               $100 - $200
             </a>
           </li>
@@ -77,22 +77,22 @@ function Filtres() {
         <h5>Rabais</h5>
         <ul>
           <li>
-            <a href="/" className="hover:text-primary transition duration-300">
+            <a href="#" className="hover:text-primary transition duration-300">
               10%-20%
             </a>
           </li>
           <li>
-            <a href="/" className="hover:text-primary transition duration-300">
+            <a href="#" className="hover:text-primary transition duration-300">
               20%-30%
             </a>
           </li>
           <li>
-            <a href="/" className="hover:text-primary transition duration-300">
+            <a href="#" className="hover:text-primary transition duration-300">
               30%-40%
             </a>
           </li>
           <li>
-            <a href="/" className="hover:text-primary transition duration-300">
+            <a href="#" className="hover:text-primary transition duration-300">
               40%-50%
             </a>
           </li>

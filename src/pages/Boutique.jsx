@@ -31,23 +31,28 @@ function Boutique() {
           </div>
         </div>
         {/** FILTRES */}
-        <div className="flex justify-between w-full">
-          <div>
-            <Button
-              onClick={() => setOpenFilter(!openFilter)}
-              status={openFilter}
-            >
-              <span className="flex gap-x-2 items-center">
-                <HiOutlineAdjustmentsHorizontal /> Filtre
-              </span>
-            </Button>
+        <div className="flex w-full flex-col">
+          <div className="flex justify-between w-full">
+            <div className="">
+              <Button
+                onClick={() => setOpenFilter(!openFilter)}
+                status={openFilter}
+              >
+                <span className="flex gap-x-2 items-center">
+                  <HiOutlineAdjustmentsHorizontal /> Filtre
+                </span>
+              </Button>
+            </div>
+            <div>
+              <select className=" border-2 font-medium border-dark px-3.5 py-2 ">
+                <option value="0">Prix ASC</option>
+                <option value="0">Prix DESC</option>
+              </select>
+            </div>
           </div>
-          <div>
-            <select className=" border-2 font-medium border-dark px-3.5 py-2 ">
-              <option value="0">Prix ASC</option>
-              <option value="0">Prix DESC</option>
-            </select>
-          </div>
+
+          {/** FILTRES */}
+          <div className="w-full">{openFilter && <Filtres />}</div>
         </div>
         {/** PRODUCTS */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 w-full">
@@ -58,8 +63,6 @@ function Boutique() {
         <div className="flex w-full justify-center mt-10 mb-28">
           <Button>Afficher plus</Button>
         </div>
-        {/** FILTRES */}
-        {openFilter && <Filtres />}
       </div>
     </>
   );

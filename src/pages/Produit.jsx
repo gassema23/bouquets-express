@@ -8,6 +8,7 @@ import { HiOutlineHeart } from "react-icons/hi2";
 
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Evaluation from "../components/Evaluation";
+import Slider from "../components/Slider";
 
 function Produit() {
   let params = useParams();
@@ -25,11 +26,7 @@ function Produit() {
             <div className="container mx-auto my-28">
               <div className="flex flex-col md:flex-row gap-5">
                 <div className="md:w-1/2 order-2 md:order-1">
-                  <img
-                    src={"../" + filteredProduct.photo}
-                    alt=""
-                    className="w-full border"
-                  />
+                  <Slider photos={filteredProduct.photo} />
                 </div>
                 <div className="w-full md:order-2 order-1">
                   <div className="border-b-2 pb-5 mb-5 border-mute ">
@@ -66,11 +63,18 @@ function Produit() {
                     ullam quos voluptate tempora odit, laudantium dolores.
                     Debitis assumenda saepe cum voluptas!
                   </p>
-                  <div className="my-4 flex gap-5 flex-col lg:flex-row">
+                  <div className="my-4 flex gap-5 flex-col">
                     <AddBasquet />
                     <div>
                       <Button styleType="primary">Acheter maintenant</Button>
                     </div>
+                  </div>
+
+                  <div className="my-4 flex gap-5 flex-col">
+                    <p className="text-mute text-sm">
+                      <strong className="font-bold">Catégorie:</strong>{" "}
+                      {filteredProduct.category}
+                    </p>
                   </div>
                 </div>
               </div>

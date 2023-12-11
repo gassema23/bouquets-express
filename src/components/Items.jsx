@@ -18,7 +18,7 @@ function Items({ product }) {
           </div>
         )}
         <Link to={"/produits/" + slugify(product.name)}>
-          <img src={product.photo} />
+          <img src={product.photo[0]} />
         </Link>
         <div className="bg-white flex p-2 divide-x divide-gray-300 absolute w-full -bottom-10 left-0 group-hover:bottom-0 transition-all duration-700">
           <div className="w-full items-center flex justify-center relative">
