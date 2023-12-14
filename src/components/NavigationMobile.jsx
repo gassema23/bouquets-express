@@ -1,9 +1,15 @@
 import { useState } from "react";
-import { HiOutlineUser, HiMiniXMark, HiChevronRight } from "react-icons/hi2";
+import {
+  HiOutlineUser,
+  HiMiniXMark,
+  HiChevronRight,
+  HiChevronLeft,
+} from "react-icons/hi2";
 import { NavLink } from "react-router-dom";
 
 function NavigationMobile() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpenService, setIsOpenService] = useState(false);
   return (
     <>
       {/** Backgrop */}
@@ -31,19 +37,58 @@ function NavigationMobile() {
         } z-[9999] h-screen fixed top-0 right-0 w-full sm:w-1/2 bg-white flex-col shadow`}
       >
         <div className="grid grid-cols-2 w-full border-b border-mute/50 text-sm">
-          <button
-            className="w-full p-4 bg-dark text-white uppercase flex items-center justify-center gap-2"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <HiMiniXMark size={20} />
-            <span>Fermer</span>
-          </button>
+          {!isOpenService ? (
+            <button
+              className="w-full p-4 bg-dark text-white uppercase flex items-center justify-center gap-2"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <HiMiniXMark size={20} />
+              <span>Fermer</span>
+            </button>
+          ) : (
+            <button
+              className="w-full p-4 bg-dark text-white uppercase flex items-center justify-center gap-2"
+              onClick={() => setIsOpenService(!isOpenService)}
+            >
+              <HiChevronLeft size={20} />
+              <span>Retour</span>
+            </button>
+          )}
           <button className="w-full p-4 uppercase flex items-center justify-center gap-2">
             <HiOutlineUser size={20} />
             <span>Connexion</span>
           </button>
         </div>
-        <ul>
+        <ul className={`${isOpenService ? "flex" : "hidden"} flex-col`}>
+          <li className="flex justify-between items-center border-b border-mute/50">
+            <NavLink
+              onClick={() => setIsOpen(false)}
+              to="/services/douce-attention"
+              className="px-4 py-4 w-full hover:bg-gray-100 transition duration-300"
+            >
+              Douce attention
+            </NavLink>
+          </li>
+          <li className="flex justify-between items-center border-b border-mute/50">
+            <NavLink
+              onClick={() => setIsOpen(false)}
+              to="/services/celebration-intermediaire"
+              className="px-4 py-4 w-full hover:bg-gray-100 transition duration-300"
+            >
+              Célébration intermédiaire
+            </NavLink>
+          </li>
+          <li className="flex justify-between items-center border-b border-mute/50">
+            <NavLink
+              onClick={() => setIsOpen(false)}
+              to="/services/grande-celebration"
+              className="px-4 py-4 w-full hover:bg-gray-100 transition duration-300"
+            >
+              Grande célébration
+            </NavLink>
+          </li>
+        </ul>
+        <ul className={`${!isOpenService ? "flex" : "hidden"} flex-col`}>
           <li className="flex justify-between items-center border-b border-mute/50">
             <NavLink
               onClick={() => setIsOpen(false)}
@@ -70,9 +115,11 @@ function NavigationMobile() {
             >
               Services
             </NavLink>
-            <span className="px-4 py-5 border-l border-mute/50">
-              {" "}
-              <HiChevronRight />{" "}
+            <span
+              className="px-4 py-5 border-l border-mute/50"
+              onClick={() => setIsOpenService(true)}
+            >
+              <HiChevronRight />
             </span>
           </li>
           <li className="flex justify-between items-center border-b border-mute/50">

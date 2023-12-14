@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster+Two&family=Whisper&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -41,6 +42,9 @@ Add active state style on primary nav
     @apply bg-gray-100
 }
 
+.dropdown .active {
+    @apply bg-gray-100
+}
 
 .react-tabs__tab-list {
     @apply container mx-auto flex gap-4
@@ -59,21 +63,21 @@ Add styling to text
 */
 @layer base {
     h1 {
-        @apply text-5xl font-bold;
+        @apply text-5xl font-bold mb-2;
     }
     h2 {
-        @apply text-4xl font-bold;
+        @apply text-4xl font-bold mb-2;
     }
     h3 {
-        @apply text-2xl font-bold;
+        @apply text-2xl font-bold mb-2;
     }
     h4 {
-        @apply text-xl font-bold;
+        @apply text-xl font-bold mb-2;
     }
     h5 {
-        @apply text-lg font-bold;
+        @apply text-lg font-bold mb-2;
     }
     h6 {
-        @apply text-lg;
+        @apply text-lg mb-2;
     } 
   }

@@ -2,6 +2,7 @@ import { HiOutlineMagnifyingGlass, HiOutlineHeart } from "react-icons/hi2";
 import Popover from "../components/Popover";
 import { Link } from "react-router-dom";
 import slugify from "react-slugify";
+import Price from "./Price";
 
 function Items({ product }) {
   return (
@@ -18,7 +19,7 @@ function Items({ product }) {
           </div>
         )}
         <Link to={"/produits/" + slugify(product.name)}>
-          <img src={product.photo[0]} />
+          <img src={".././" + product.photo[0]} />
         </Link>
         <div className="bg-white flex p-2 divide-x divide-gray-300 absolute w-full -bottom-10 left-0 group-hover:bottom-0 transition-all duration-700">
           <div className="w-full items-center flex justify-center relative">
@@ -35,22 +36,9 @@ function Items({ product }) {
       </div>
       <div className="font-bold mb-2">{product.name}</div>
       <div className="font-bold text-primary block group-hover:hidden">
-        {product.sale ? (
-          <span className="flex space-x-4">
-            <span>
-              {" "}
-              $
-              {(product.price - (product.price * product.sale) / 100).toFixed(
-                2
-              )}{" "}
-            </span>
-            <span className="text-gray-500 line-through">${product.price}</span>
-          </span>
-        ) : (
-          <span>${product.price}</span>
-        )}
+        <Price productPrice={product.price} productSale={product.sale} />
       </div>
-      <div className="translate-y-[150%] group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition ease-in-out duration-1000">
+      <div className="translate-y-[150%] group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition ease-out duration-1000">
         <Link
           to={"/produits/" + slugify(product.name)}
           className="font-bold text-primary hover:text-dark transition duration-300"

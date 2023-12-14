@@ -13,38 +13,41 @@ function NavigationDesktop() {
         </li>
         <li className="inline-block relative group">
           <NavLink to="/services" title="Services" hovered="group" />
-          <ul className="invisible group-hover:visible absolute top-6 left-0 w-52 flex flex-col bg-white border border-mute/30 shadow transition-all ease-in-out duration-500">
+          <ul className="dropdown invisible group-hover:visible absolute top-6 left-0 w-52 flex flex-col bg-white border border-mute/30 shadow transition-all ease-in-out duration-500">
             <li className="py-2">
               <ReactLink
-                to="/services"
-                title="Services"
-                className="px-2 py-1.5 hover:bg-mute/30 block transition ease-in-out duration-300"
+                to="/services/douce-attention"
+                title="Douce attention"
+                className="px-2 py-1.5 hover:bg-gray-100 block transition ease-in-out duration-300"
               >
-                Link 1
+                Douce attention
               </ReactLink>
             </li>
             <li className="py-2">
               <ReactLink
-                to="/services"
-                title="Services"
-                className="px-2 py-1.5 hover:bg-mute/30 block transition ease-in-out duration-300"
+                to="/services/celebration-intermediaire"
+                title="Célébration intermédiaire"
+                className="px-2 py-1.5 hover:bg-gray-100 block transition ease-in-out duration-300"
               >
-                Link 2
+                Célébration intermédiaire
               </ReactLink>
             </li>
             <li className="py-2">
               <ReactLink
-                to="/services"
+                to="/services/grande-celebration"
                 title="Services"
-                className="px-2 py-1.5 hover:bg-mute/30 block transition ease-in-out duration-300"
+                className="px-2 py-1.5 hover:bg-gray-100 block transition ease-in-out duration-300"
               >
-                Link 3
+                Grande célébration
               </ReactLink>
             </li>
           </ul>
         </li>
         <li className="inline-block relative">
           <NavLink to="/a-propos" title="À propos" />
+        </li>
+        <li className="inline-block relative">
+          <NavLink to="/blogue" title="Blogue" />
         </li>
         <li className="inline-block relative">
           <NavLink to="/nous-joindre" title="Nous joindre" />

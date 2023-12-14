@@ -41,6 +41,9 @@ export default {
     fontFamily: {
       sans: ["Roboto Slab", ...defaultTheme.fontFamily.sans],
       cursive: ["Ruthie"],
+      card1: ["Whisper"],
+      card2: ["Dancing Script"],
+      card3: ["Lobster Two"],
     },
     container: {
       // you can configure the container to be centered

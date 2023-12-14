@@ -8,7 +8,12 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import NousJoindre from "./pages/NousJoindre";
 import Boutique from "./pages/Boutique";
+import Panier from "./pages/Panier";
 import Produit from "./pages/Produit";
+import DouceAttention from "./pages/DouceAttention";
+import CelebrationIntermediaire from "./pages/CelebrationIntermediaire";
+import GrandeCelebration from "./pages/GrandeCelebration";
+import Blog from "./pages/Blog";
 
 function App() {
   return (
@@ -25,6 +30,32 @@ function App() {
               </React.Suspense>
             }
           />
+          <Route path="services">
+            <Route
+              path="douce-attention"
+              element={
+                <React.Suspense fallback={<>...</>}>
+                  <DouceAttention />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="celebration-intermediaire"
+              element={
+                <React.Suspense fallback={<>...</>}>
+                  <CelebrationIntermediaire />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="grande-celebration"
+              element={
+                <React.Suspense fallback={<>...</>}>
+                  <GrandeCelebration />
+                </React.Suspense>
+              }
+            />
+          </Route>
           <Route
             path="boutique"
             element={
@@ -38,6 +69,22 @@ function App() {
             element={
               <React.Suspense fallback={<>...</>}>
                 <Produit />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="panier"
+            element={
+              <React.Suspense fallback={<>...</>}>
+                <Panier />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="blogue"
+            element={
+              <React.Suspense fallback={<>...</>}>
+                <Blog />
               </React.Suspense>
             }
           />

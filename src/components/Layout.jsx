@@ -10,7 +10,9 @@ function Layout() {
   return (
     <div className="flex justify-between flex-col w-full min-h-screen scroll-smooth">
       <header>
-        <div className={`fixed z-40 w-full bg-white transition duration-300`}>
+        <div
+          className={`fixed z-40 w-full bg-white transition duration-300 shadow`}
+        >
           <div className="flex justify-between py-2 container mx-auto">
             <Logo />
             <NavigationDesktop />

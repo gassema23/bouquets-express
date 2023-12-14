@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Card from "../components/Card";
 import Items from "../components/Items";
 import Products from "../datas/Products";
+import Newsletter from "../components/Newsletter";
 
 function Home() {
   const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
@@ -24,12 +25,18 @@ function Home() {
           </div>
         </div>
         <div className="h-full w-full flex justify-end align-middle items-center container mx-auto">
-          <div className="flex flex-col text-white uppercase">
-            <h2 className="text-shadow">lipsumd</h2>
+          <div className="flex flex-col text-white uppercase w-full lg:w-1/2">
+            <h2 className="text-shadow">
+              malesuada eget nisl et, venenatis porta enim.
+            </h2>
             <h1 className="text-7xl text-shadow">Lorem ipsum</h1>
-            <h3 className="text-shadow">lorem</h3>
+            <h3 className="text-shadow">
+              Duis placerat, urna a lacinia maximus
+            </h3>
             <div className="my-5">
-              <Button styleType="white">Acheter maintenant</Button>
+              <Button to="/boutique" styleType="white">
+                Visiter la boutique
+              </Button>
             </div>
           </div>
         </div>
@@ -97,7 +104,7 @@ function Home() {
               condimentum.
             </p>
           </div>
-          <div className="px-4 md:px-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid gap-5">
+          <div className="px-4 md:px-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid gap-5 mt-12">
             {newProduct.slice(0, 4).map((product) => (
               <Items key={product.productId} product={product} />
             ))}
@@ -107,6 +114,7 @@ function Home() {
           </div>
         </section>
         {/** Section newsletter */}
+        <Newsletter />
       </main>
       <Footer />
     </>

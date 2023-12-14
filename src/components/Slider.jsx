@@ -2,7 +2,6 @@ import { useState } from "react";
 
 function Slider({ photos }) {
   const [changePhoto, setChangePhoto] = useState(photos[0]);
-
   return (
     <div className=" flex flex-col">
       {/** Grande */}

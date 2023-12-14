@@ -1,14 +1,14 @@
 import { HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
-
 import PageBanner from "../components/PageBanner";
 import Button from "../components/Button";
 import { useState } from "react";
 import Filtres from "../components/Filtres";
-import Items from "../components/Items";
+import ProductsList from "../components/ProductsList";
 import Products from "../datas/Products";
 
 function Boutique() {
   const [openFilter, setOpenFilter] = useState(false);
+
   return (
     <>
       <PageBanner
@@ -55,11 +55,8 @@ function Boutique() {
           <div className="w-full">{openFilter && <Filtres />}</div>
         </div>
         {/** PRODUCTS */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 w-full">
-          {Products.map((product) => (
-            <Items product={product} />
-          ))}
-        </div>
+        <ProductsList products={Products} />
+
         <div className="flex w-full justify-center mt-10 mb-28">
           <Button>Afficher plus</Button>
         </div>
