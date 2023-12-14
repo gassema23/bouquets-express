@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
 import PageBanner from "../components/PageBanner";
-
+import image from "/img/annie-spratt-_XdU9Q5iFRE-unsplash.jpg";
 function NotFound() {
   return (
     <>
       <PageBanner
         pageTitle={"Page introuvable"}
         breadcrumb={["Page introuvable"]}
-        banner="./img/annie-spratt-_XdU9Q5iFRE-unsplash.jpg"
+        banner={image}
       />
       <div className="md:container md:mx-auto px-4 md:px-0 my-10">
         <div className="text-center">

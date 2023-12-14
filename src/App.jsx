@@ -14,6 +14,7 @@ import DouceAttention from "./pages/DouceAttention";
 import CelebrationIntermediaire from "./pages/CelebrationIntermediaire";
 import GrandeCelebration from "./pages/GrandeCelebration";
 import Blog from "./pages/Blog";
+import Article from "./pages/Article";
 
 function App() {
   return (
@@ -85,6 +86,14 @@ function App() {
             element={
               <React.Suspense fallback={<>...</>}>
                 <Blog />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="blogue/article/:slug"
+            element={
+              <React.Suspense fallback={<>...</>}>
+                <Article />
               </React.Suspense>
             }
           />

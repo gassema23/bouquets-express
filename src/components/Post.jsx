@@ -1,4 +1,5 @@
 import Button from "./Button";
+import slugify from "react-slugify";
 function Post({ post }) {
   return (
     <article className="flex flex-col gap-4">
@@ -19,7 +20,7 @@ function Post({ post }) {
       <div className="h-[1px] w-1/5 bg-mute/30"></div>
       <p>{post.body}</p>
       <div>
-        <Button>Lire plus</Button>
+        <Button to={"/blogue/article/" + slugify(post.title)}>Lire plus</Button>
       </div>
     </article>
   );
