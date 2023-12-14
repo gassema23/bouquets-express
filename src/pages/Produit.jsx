@@ -10,6 +10,7 @@ import slugify from "react-slugify";
 import { HiOutlineHeart } from "react-icons/hi2";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { HiMiniPaperAirplane } from "react-icons/hi2";
+import image from "/img/annie-spratt-_XdU9Q5iFRE-unsplash.jpg";
 
 import Products from "../datas/Products";
 
@@ -24,7 +25,7 @@ function Produit() {
             <PageBanner
               pageTitle={filteredProduct.name}
               breadcrumb={["Boutique", filteredProduct.name]}
-              banner="../../img/annie-spratt-_XdU9Q5iFRE-unsplash.jpg"
+              banner={image}
             />
             <div className="container mx-auto my-28">
               <div className="flex flex-col md:flex-row gap-5">

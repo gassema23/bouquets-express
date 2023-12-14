@@ -1,6 +1,7 @@
 import TeamCard from "../components/TeamCard";
 import TeamMembers from "../datas/TeamMembers";
 import PageBanner from "../components/PageBanner";
+import image from "/img/annie-spratt-_XdU9Q5iFRE-unsplash.jpg";
 
 function About() {
   return (
@@ -8,7 +9,7 @@ function About() {
       <PageBanner
         pageTitle={"À propos de nous"}
         breadcrumb={["À propos"]}
-        banner="./img/annie-spratt-_XdU9Q5iFRE-unsplash.jpg"
+        banner={image}
       />
       <div className="md:container md:mx-auto px-4 md:px-0 my-10">
         <h2 className="mb-10">

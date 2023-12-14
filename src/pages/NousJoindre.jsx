@@ -2,6 +2,7 @@ import PageBanner from "../components/PageBanner";
 import Button from "../components/Button";
 import Input from "../components/Input";
 import TextArea from "../components/TextArea";
+import image from "/img/annie-spratt-_XdU9Q5iFRE-unsplash.jpg";
 
 function NousJoindre() {
   return (
@@ -9,11 +10,11 @@ function NousJoindre() {
       <PageBanner
         pageTitle={"Nous joindre"}
         breadcrumb={["Nous joindre"]}
-        banner="./img/annie-spratt-_XdU9Q5iFRE-unsplash.jpg"
+        banner={image}
       />
       <div className="md:container md:mx-auto px-4 md:px-0 my-10">
         <div className="flex flex-col md:flex-row gap-5">
-          <div className="w-1/2">
+          <div className="md:w-1/2">
             <h3>Trouvez notre boutique</h3>
             <iframe
               className="w-full h-[450px]"
@@ -23,7 +24,7 @@ function NousJoindre() {
               loading="lazy"
             ></iframe>
           </div>
-          <div className="flex w-1/2 flex-col order-1 md:order-2">
+          <div className="flex md:w-1/2 flex-col order-1 md:order-2">
             <div className="mb-4">
               <h3>Prenez contact avec nous</h3>
             </div>

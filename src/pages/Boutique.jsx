@@ -1,27 +1,40 @@
 import { HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
 import PageBanner from "../components/PageBanner";
 import Button from "../components/Button";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Filtres from "../components/Filtres";
 import ProductsList from "../components/ProductsList";
 import Products from "../datas/Products";
+import image from "/img/annie-spratt-_XdU9Q5iFRE-unsplash.jpg";
+import { Transition } from "react-transition-group";
 
 function Boutique() {
   const [openFilter, setOpenFilter] = useState(false);
+  const duration = 250;
+  const nodeRef = useRef(null);
+
+  const defaultStyle = {
+    transition: `transform ${duration}ms ease-in-out`,
+    transform: "translateY(101%)",
+  };
+  const transitionStyles = {
+    entering: { transform: "translateY(101%)" },
+    entered: { transform: "translateY(0%)" },
+  };
 
   return (
     <>
       <PageBanner
         pageTitle={"Nos produits"}
         breadcrumb={["Boutique"]}
-        banner="./img/annie-spratt-_XdU9Q5iFRE-unsplash.jpg"
+        banner={image}
       />
       {/** PROMOTION / COMMENDITAIRES */}
       <div className="md:container md:mx-auto px-4 md:px-0 my-10">
         <div className="h-[350px] items-center relative w-full mb-10 flex justify-center flex-col overflow-hidden">
           <div className="bg-dark/50 w-full h-full absolute top-0 left-0"></div>
           <img
-            src="./img/dean-david-CSSrQDKvHVc-unsplash.jpg"
+            src="/img/dean-david-CSSrQDKvHVc-unsplash.jpg"
             className="w-full absolute -z-10"
           />
           <div className="text-white z-10 text-center flex flex-col w-full items-center justify-center">
@@ -50,9 +63,22 @@ function Boutique() {
               </select>
             </div>
           </div>
-
           {/** FILTRES */}
-          <div className="w-full">{openFilter && <Filtres />}</div>
+          <Transition in={openFilter} timeout={duration}>
+            {(state) =>
+              openFilter && (
+                <div
+                  className="w-full"
+                  style={{
+                    ...defaultStyle,
+                    ...transitionStyles[state],
+                  }}
+                >
+                  <Filtres />
+                </div>
+              )
+            }
+          </Transition>
         </div>
         {/** PRODUCTS */}
         <ProductsList products={Products} />

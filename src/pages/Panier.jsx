@@ -4,14 +4,11 @@ import Button from "../components/Button";
 import GreetingCard from "../components/GreetingCard";
 import TotalPanier from "../components/TotalPanier";
 import Products from "../datas/Products";
+import image from "/img/annie-spratt-_XdU9Q5iFRE-unsplash.jpg";
 function Panier() {
   return (
     <>
-      <PageBanner
-        pageTitle={"Panier"}
-        breadcrumb={["Panier"]}
-        banner="./img/annie-spratt-_XdU9Q5iFRE-unsplash.jpg"
-      />
+      <PageBanner pageTitle={"Panier"} breadcrumb={["Panier"]} banner={image} />
       <div className="md:container md:mx-auto px-4 md:px-0 my-10">
         {Products.slice(0, 4).map((product) => (
           <>

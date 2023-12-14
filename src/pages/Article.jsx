@@ -4,12 +4,12 @@ import InputWithButton from "../components/InputWithButton";
 import PageBanner from "../components/PageBanner";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import Posts from "../datas/Posts";
+import Input from "../components/Input";
 import Button from "../components/Button";
 
 function Article() {
   let params = useParams();
   const post = Posts.filter((data) => slugify(data.title) == params.slug);
-  console.log(post[0]);
   return (
     <>
       <main className="md:container md:mx-auto px-4 md:px-0 my-10 grid grid-cols-12 gap-5 mt-[150px]">
@@ -80,6 +80,13 @@ function Article() {
         {/** Blogue */}
         <section className="flex w-full flex-col col-span-8">
           <article className="flex flex-col gap-4">
+            <div className="w-full text-center">
+              <h2>{post[0].title}</h2>
+              <div className="flex gap-x-2 divide-x text-sm mt-4 justify-center text-mute">
+                <span>Écrit par : Helene Engels</span>
+                <span className="pl-2">Aucun commentaire</span>
+              </div>
+            </div>
             <div className="relative h-[450px] overflow-hidden group">
               <div
                 className="absolute w-full h-full ease-in-out transform bg-center bg-cover "
@@ -89,9 +96,22 @@ function Article() {
               ></div>
             </div>
             <span className="text-mute">Actualité</span>
-            <h4>{post[0].title}</h4>
             <div className="h-[1px] w-1/5 bg-mute/30"></div>
             <p>{post[0].body}</p>
+
+            <div className="mt-10 border-t border-mute pt-10">
+              <h3>Laissez un commentaire</h3>
+              <div className="flex gap-4">
+                <Input placeholder="Adresse courriel" />
+                <Input placeholder="Nom complet" />
+              </div>
+              <textarea
+                placeholder="Ajouter votre commentaire"
+                rows="5"
+                className="border w-full my-4 outline-0 focus:border-dark transition duration-300 p-4"
+              ></textarea>
+              <Button styleType="primary">Envoyer</Button>
+            </div>
           </article>
         </section>
       </main>

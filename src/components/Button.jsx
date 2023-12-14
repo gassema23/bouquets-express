@@ -41,7 +41,7 @@ const Button = (props) => {
 
   if (props.to) {
     return (
-      <form action={props.to}>
+      <form action={props.to} method="GET">
         <button
           onClick={onclick}
           className={`${
@@ -49,7 +49,6 @@ const Button = (props) => {
           } px-3.5 py-2 overflow-hidden relative group cursor-pointer border-2 font-medium ${
             borderColorVariant[styleType]
           } `}
-          src={props.to}
         >
           <span
             className={`absolute w-64 h-0 transition-all duration-500 origin-center rotate-45 -translate-x-20  ${backgroundColorVariant[styleType]} top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease`}

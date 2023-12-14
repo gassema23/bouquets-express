@@ -1,31 +1,25 @@
-import NavigationDesktop from "../components/NavigationDesktop";
-import NavigationMobile from "../components/NavigationMobile";
-import Logo from "../components/Logo";
+import Header from "../components/Header";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
 import Items from "../components/Items";
 import Products from "../datas/Products";
 import Newsletter from "../components/Newsletter";
+import image from "/img/slide3.png";
 
 function Home() {
   const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
   const newProduct = shuffle(Products);
   return (
     <>
-      <header
+      <Header />
+      <div
         className="bg-blend-hue h-screen justify-around items-center relative bg-fixed bg-no-repeat w-full"
-        style={{ backgroundImage: `url(./img/slide3.png)` }}
+        style={{ backgroundImage: `url(${image})` }}
       >
-        <div className={`fixed z-10 w-full bg-white transition duration-300`}>
-          <div className="flex justify-between py-2 container mx-auto items-center">
-            <Logo />
-            <NavigationDesktop />
-            <NavigationMobile />
-          </div>
-        </div>
+        <div className="absolute top-0 left-0 bg-dark/10 w-full h-full"></div>
         <div className="h-full w-full flex justify-end align-middle items-center container mx-auto">
-          <div className="flex flex-col text-white uppercase w-full lg:w-1/2">
+          <div className="flex flex-col text-white uppercase w-full lg:w-1/2 z-10 ">
             <h2 className="text-shadow">
               malesuada eget nisl et, venenatis porta enim.
             </h2>
@@ -40,7 +34,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </header>
+      </div>
       <main>
         {/** Section type événement */}
         <section className="container mx-auto my-28">
