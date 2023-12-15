@@ -1,6 +1,6 @@
 import PageBanner from "../components/PageBanner";
 import AddBasquet from "../components/AddBasquet";
-import Button from "../components/Button";
+import ButtonLink from "../components/ButtonLink";
 import Evaluation from "../components/Evaluation";
 import Slider from "../components/Slider";
 import InputWithButton from "../components/InputWithButton";
@@ -56,12 +56,11 @@ function Produit() {
                     {filteredProduct.sale ? (
                       <h5 className="flex space-x-4">
                         <span>
-                          {" "}
                           $
                           {(
                             filteredProduct.price -
                             (filteredProduct.price * filteredProduct.sale) / 100
-                          ).toFixed(2)}{" "}
+                          ).toFixed(2)}
                         </span>
                         <span className="text-gray-500 line-through">
                           ${filteredProduct.price}
@@ -82,9 +81,9 @@ function Produit() {
                       <>
                         <AddBasquet />
                         <div>
-                          <Button to="/panier" styleType="primary">
+                          <ButtonLink to="/panier" styleType="primary">
                             Acheter maintenant
-                          </Button>
+                          </ButtonLink>
                         </div>
                       </>
                     ) : (

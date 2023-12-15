@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Button from "../components/Button";
+import ButtonLink from "../components/ButtonLink";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
 import Items from "../components/Items";
@@ -28,9 +29,9 @@ function Home() {
               Duis placerat, urna a lacinia maximus
             </h3>
             <div className="my-5">
-              <Button to="/boutique" styleType="white">
+              <ButtonLink to="/boutique" styleType="white">
                 Visiter la boutique
-              </Button>
+              </ButtonLink>
             </div>
           </div>
         </div>
@@ -104,7 +105,7 @@ function Home() {
             ))}
           </div>
           <div className="mt-10 flex w-full justify-center">
-            <Button to="/boutique">Voir tous les produits</Button>
+            <ButtonLink to="/boutique">Voir tous les produits</ButtonLink>
           </div>
         </section>
         {/** Section newsletter */}
