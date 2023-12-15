@@ -2,8 +2,7 @@ import { NavLink as ReactLink } from "react-router-dom";
 import NavLink from "./NavLink";
 import Search from "./Search";
 import PanierTop from "./PanierTop";
-
-import { HiOutlineUser } from "react-icons/hi2";
+import Connexion from "./Connexion";
 
 function NavigationDesktop() {
   return (
@@ -61,11 +60,7 @@ function NavigationDesktop() {
       </nav>
       <div className="flex items-center text-gray-800">
         <Search />
-        <div className="hidden lg:flex">
-          <button className="lg:inline-flex lg:w-auto w-full px-3 py-2 items-center justify-center transition-colors duration-500 hover:text-primary">
-            <HiOutlineUser size={25} />
-          </button>
-        </div>
+        <Connexion />
         <PanierTop />
       </div>
     </>

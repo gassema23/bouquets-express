@@ -10,24 +10,26 @@ function NotFound() {
         breadcrumb={["Page introuvable"]}
         banner={image}
       />
-      <div className="md:container md:mx-auto px-4 md:px-0 my-10">
-        <div className="text-center">
-          <h1 className="tracking-widest text-gray-800 uppercase text-8xl py-4">
-            404
-          </h1>
-          <h3 className="tracking-widest text-gray-800 uppercase text-2xl">
-            Page introuvable
-          </h3>
-          <p className="text-mute pb-4">
-            Veuillez retourner à la page d'
-            <Link
-              to="/"
-              className="text-primary hover:text-mute transition duration-300"
-            >
-              accueil
-            </Link>
-          </p>
-          <div className="w-full flex justify-center">
+      <main className="md:container md:mx-auto px-4 md:px-0 my-10">
+        <div className="text-center my-28">
+          <section>
+            <h1 className="tracking-widest text-gray-800 uppercase text-8xl py-4">
+              404
+            </h1>
+            <h3 className="tracking-widest text-gray-800 uppercase text-2xl">
+              Page introuvable
+            </h3>
+            <p className="text-mute pb-4">
+              Veuillez retourner à la page d'
+              <Link
+                to="/"
+                className="text-primary hover:text-mute transition duration-300"
+              >
+                accueil
+              </Link>
+            </p>
+          </section>
+          <section className="w-full flex justify-center">
             <div className="flex my-4 w-3/5">
               <input
                 name="rechercher"
@@ -48,9 +50,9 @@ function NotFound() {
                 </span>
               </button>
             </div>
-          </div>
+          </section>
         </div>
-      </div>
+      </main>
     </>
   );
 }

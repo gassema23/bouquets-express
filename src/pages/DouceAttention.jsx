@@ -13,17 +13,20 @@ function DouceAttention() {
         banner={banner}
       />
       <main className="md:container md:mx-auto px-4 md:px-0 my-10">
-        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-        <p>
-          Vestibulum dignissim justo sed sapien ullamcorper, a dictum massa
-          posuere. Integer nisi elit, congue id efficitur rutrum, suscipit nec
-          elit. Donec mattis sed ligula in commodo. Vivamus viverra lectus id
-          dui ultricies tempus. Morbi a eleifend orci. Vivamus nibh erat, mattis
-          sed ullamcorper in, bibendum eu mauris. Donec eget facilisis diam,
-          eget consectetur ex. Pellentesque vitae risus interdum, facilisis
-          velit ut, finibus ipsum. Morbi ullamcorper feugiat purus vel sodales.
-        </p>
-        <section className="container mx-auto my-28 ">
+        <section>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+          <p>
+            Vestibulum dignissim justo sed sapien ullamcorper, a dictum massa
+            posuere. Integer nisi elit, congue id efficitur rutrum, suscipit nec
+            elit. Donec mattis sed ligula in commodo. Vivamus viverra lectus id
+            dui ultricies tempus. Morbi a eleifend orci. Vivamus nibh erat,
+            mattis sed ullamcorper in, bibendum eu mauris. Donec eget facilisis
+            diam, eget consectetur ex. Pellentesque vitae risus interdum,
+            facilisis velit ut, finibus ipsum. Morbi ullamcorper feugiat purus
+            vel sodales.
+          </p>
+        </section>
+        <section className="my-28 ">
           <div className="flex flex-col justify-center items-center">
             <h2 className="mb-4">
               Voyer nos bouquets pour les douces attentions.

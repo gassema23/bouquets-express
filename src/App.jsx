@@ -15,6 +15,7 @@ import CelebrationIntermediaire from "./pages/CelebrationIntermediaire";
 import GrandeCelebration from "./pages/GrandeCelebration";
 import Blog from "./pages/Blog";
 import Article from "./pages/Article";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -31,32 +32,39 @@ function App() {
               </React.Suspense>
             }
           />
-          <Route path="services">
-            <Route
-              path="douce-attention"
-              element={
-                <React.Suspense fallback={<>...</>}>
-                  <DouceAttention />
-                </React.Suspense>
-              }
-            />
-            <Route
-              path="celebration-intermediaire"
-              element={
-                <React.Suspense fallback={<>...</>}>
-                  <CelebrationIntermediaire />
-                </React.Suspense>
-              }
-            />
-            <Route
-              path="grande-celebration"
-              element={
-                <React.Suspense fallback={<>...</>}>
-                  <GrandeCelebration />
-                </React.Suspense>
-              }
-            />
-          </Route>
+          <Route
+            path="services"
+            element={
+              <React.Suspense fallback={<>...</>}>
+                <Services />
+              </React.Suspense>
+            }
+          />
+
+          <Route
+            path="services/douce-attention"
+            element={
+              <React.Suspense fallback={<>...</>}>
+                <DouceAttention />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="services/celebration-intermediaire"
+            element={
+              <React.Suspense fallback={<>...</>}>
+                <CelebrationIntermediaire />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="services/grande-celebration"
+            element={
+              <React.Suspense fallback={<>...</>}>
+                <GrandeCelebration />
+              </React.Suspense>
+            }
+          />
           <Route
             path="boutique"
             element={

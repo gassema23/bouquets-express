@@ -12,9 +12,9 @@ function NousJoindre() {
         breadcrumb={["Nous joindre"]}
         banner={image}
       />
-      <div className="md:container md:mx-auto px-4 md:px-0 my-10">
-        <div className="flex flex-col md:flex-row gap-5">
-          <div className="md:w-1/2">
+      <main className="md:container md:mx-auto px-4 md:px-0 my-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <section className="order-2 md:order-1">
             <h3>Trouvez notre boutique</h3>
             <iframe
               className="w-full h-[450px]"
@@ -23,8 +23,8 @@ function NousJoindre() {
               allowFullScreen=""
               loading="lazy"
             ></iframe>
-          </div>
-          <div className="flex md:w-1/2 flex-col order-1 md:order-2">
+          </section>
+          <section className="order-1 md:order-2">
             <div className="mb-4">
               <h3>Prenez contact avec nous</h3>
             </div>
@@ -37,9 +37,9 @@ function NousJoindre() {
             <div className="flex justify-start my-4">
               <Button>Envoyer</Button>
             </div>
-          </div>
+          </section>
         </div>
-      </div>
+      </main>
     </>
   );
 }

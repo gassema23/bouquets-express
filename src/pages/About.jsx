@@ -11,17 +11,19 @@ function About() {
         breadcrumb={["À propos"]}
         banner={image}
       />
-      <div className="md:container md:mx-auto px-4 md:px-0 my-10">
-        <h2 className="mb-10">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Exercitationem eius reiciendis tempora veritatis consequuntur?
-          Officiis ab delectus deserunt veritatis unde natus fugiat, id quo a
-          non. Dolor inventore alias dolorem.
-        </p>
-        <div className="my-28">
+      <main className="md:container md:mx-auto px-4 md:px-0 my-10">
+        <section>
+          <h2 className="mb-10">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Exercitationem eius reiciendis tempora veritatis consequuntur?
+            Officiis ab delectus deserunt veritatis unde natus fugiat, id quo a
+            non. Dolor inventore alias dolorem.
+          </p>
+        </section>
+        <section className="my-28">
           <div className="text-center my-5">
             <h2>Rencontrez notre équipe</h2>
             <p>
@@ -39,8 +41,8 @@ function About() {
               />
             ))}
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </>
   );
 }

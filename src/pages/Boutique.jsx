@@ -30,8 +30,8 @@ function Boutique() {
         banner={image}
       />
       {/** PROMOTION / COMMENDITAIRES */}
-      <div className="md:container md:mx-auto px-4 md:px-0 my-10">
-        <div className="h-[350px] items-center relative w-full mb-10 flex justify-center flex-col overflow-hidden">
+      <main className="md:container md:mx-auto px-4 md:px-0 my-10">
+        <section className="h-[350px] items-center relative w-full mb-10 flex justify-center flex-col overflow-hidden">
           <div className="bg-dark/50 w-full h-full absolute top-0 left-0"></div>
           <img
             src="/img/dean-david-CSSrQDKvHVc-unsplash.jpg"
@@ -42,9 +42,9 @@ function Boutique() {
             <h4 className="mb-5 text-shadow">Jusqu’à 30% de rabais</h4>
             <Button styleType="white">Acheter maintenant</Button>
           </div>
-        </div>
+        </section>
         {/** FILTRES */}
-        <div className="flex w-full flex-col">
+        <section className="flex w-full flex-col">
           <div className="flex justify-between w-full">
             <div className="">
               <Button
@@ -79,14 +79,13 @@ function Boutique() {
               )
             }
           </Transition>
-        </div>
+        </section>
         {/** PRODUCTS */}
         <ProductsList products={Products} />
-
-        <div className="flex w-full justify-center mt-10 mb-28">
+        <section className="flex w-full justify-center mt-10 mb-28">
           <Button>Afficher plus</Button>
-        </div>
-      </div>
+        </section>
+      </main>
     </>
   );
 }

@@ -14,7 +14,7 @@ function Home() {
   return (
     <>
       <Header />
-      <div
+      <section
         className="bg-blend-hue h-screen justify-around items-center relative bg-fixed bg-no-repeat w-full"
         style={{ backgroundImage: `url(${image})` }}
       >
@@ -35,7 +35,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <main>
         {/** Section type événement */}
         <section className="container mx-auto my-28">

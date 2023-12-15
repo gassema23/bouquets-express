@@ -23,7 +23,7 @@ function CelebrationIntermediaire() {
           eget consectetur ex. Pellentesque vitae risus interdum, facilisis
           velit ut, finibus ipsum. Morbi ullamcorper feugiat purus vel sodales.
         </p>
-        <section className="container mx-auto my-28 ">
+        <section className="my-28 ">
           <div className="flex flex-col justify-center items-center">
             <h2 className="mb-4">
               Voyer nos bouquets pour les célébration intermédiaire
