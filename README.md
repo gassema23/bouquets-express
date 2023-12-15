@@ -11,12 +11,20 @@
 
 # Bouquets Express
 
-Projet fictif
-
-Programmé sous REACT.
+> Projet fictif
 
 ## Installation
 
-### Installer les dépendences
+Étapes pour installer et configurer le projet :
 
-npm i
+1. Copier " Cloner " le projet
+2. Installer les dépendences avec `npm install`
+3. Pour afficher en local `npm run dev` et utiliser le lien indiqué
+
+## License
+
+- [MIT license](https://opensource.org/licenses/MIT).
+
+## Credits
+
+- Mathieu Gasse <gasse.mathieu@gmail.com>
