@@ -1,8 +1,22 @@
-# React + Vite
+<p align="center">
+    <a href="https://bouquets-express.vercel.app/" target="_blank">
+        <img src="https://bouquets-express.vercel.app/img/bouquetsExpress.png" 
+            width="400" alt="Telus Logo">
+    </a>
+</p>
+<p align="center">
+<img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version">
+<img src="https://img.shields.io/packagist/l/laravel/framework" alt="License">
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Bouquets Express
 
-Currently, two official plugins are available:
+Projet fictif
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Programmé sous REACT.
+
+## Installation
+
+### Installer les dépendences
+
+npm i
