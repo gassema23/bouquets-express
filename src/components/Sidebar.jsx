@@ -26,6 +26,17 @@ const Sidebar = ({ children, duration, state, position = "right" }) => {
       entering: { transform: "translateY(-101%)" },
       entered: { transform: "translateY(0%)" },
     };
+  } else if (position === "left") {
+    classStyle =
+      "w-full sm:w-2/3 lg:w-1/3 h-screen fixed top-0 left-0 bg-white z-50";
+    defaultStyle = {
+      transition: `transform ${duration}ms ease-in-out`,
+      transform: "translateX(-101%)",
+    };
+    transitionStyles = {
+      entering: { transform: "translateX(-101%)" },
+      entered: { transform: "translateX(0)" },
+    };
   } else {
     classStyle = "w-1/2 xl:w-1/5 h-screen fixed top-0 left-0 bg-white z-50";
     defaultStyle = {

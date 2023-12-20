@@ -31,7 +31,7 @@ function NavigationMobile() {
       <Transition in={isOpen} timeout={duration}>
         {/** Navigation */}
         {(state) => (
-          <Sidebar duration={duration} state={state}>
+          <Sidebar duration={duration} state={state} position="left">
             {isOpen && (
               <nav id="mobileNav">
                 <div className="grid grid-cols-2 w-full border-b border-mute/50 text-sm">

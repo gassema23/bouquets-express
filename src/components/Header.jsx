@@ -8,10 +8,10 @@ function Header() {
       <div
         className={`fixed z-40 w-full bg-white transition duration-300 shadow`}
       >
-        <div className="flex justify-between py-2 container mx-auto">
+        <div className="flex justify-between py-2 container mx-auto items-center">
+          <NavigationMobile />
           <Logo />
           <NavigationDesktop />
-          <NavigationMobile />
         </div>
       </div>
     </header>

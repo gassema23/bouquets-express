@@ -92,7 +92,7 @@ function Home() {
         {/** Section produits */}
         <section className="container mx-auto my-28 ">
           <div className="flex flex-col justify-center items-center">
-            <h2 className="mb-4">Voyer nos plus récent produits.</h2>
+            <h2 className="mb-4">Voyez nos plus récent produits.</h2>
             <p className="text-sm">
               Aliquam erat volutpat. Morbi vitae rutrum purus. Cras euismod
               dolor quam, quis auctor nunc tempus a. Proin semper sed ante nec
